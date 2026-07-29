@@ -1,6 +1,6 @@
 #VitaCheck - BMI Calculator
 #Author: Gabriela Franciscato
-#Console-based Python aplication
+
 
 print("Welcome to VitaCheck")
 
@@ -22,7 +22,7 @@ while True:
     try:
         height = float(input("Enter your height (m): "))
 
-        if height > 0 and height <= 100:
+        if height > 0 and height <= 3:
             break
         else:
             print("Height must be between 0 and 3 metres.")

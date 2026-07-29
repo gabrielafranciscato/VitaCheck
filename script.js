@@ -1,11 +1,6 @@
 function calculateBMI() {
-    const weight = parseFloat(
-        document.getElementById("weight").value
-    );
-
-    const height = parseFloat(
-        document.getElementById("height").value
-    );
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value);
 
     const result = document.getElementById("result");
 
@@ -19,17 +14,14 @@ function calculateBMI() {
         return;
     }
 
-    // Height is entered in centimetres
-    if (height <= 0 || height > 300) {
-        showError("Height must be between 0 and 300 centimetres.");
+    // Height is entered in metres
+    if (height <= 0 || height > 3) {
+        showError("Height must be between 0 and 3 metres.");
         return;
     }
 
-    // Convert centimetres to metres
-    const heightInMetres = height / 100;
-
     // Calculate BMI
-    const bmi = weight / (heightInMetres * heightInMetres);
+    const bmi = weight / (height * height);
 
     let category;
 
@@ -45,9 +37,10 @@ function calculateBMI() {
 
     result.className = "success";
 
-    result.innerHTML =
-        `Your BMI is ${bmi.toFixed(2)}.<br>
-        Category: ${category}`;
+    result.innerHTML = `
+        Your BMI is ${bmi.toFixed(2)}.<br>
+        Category: ${category}
+    `;
 }
 
 function showError(message) {
