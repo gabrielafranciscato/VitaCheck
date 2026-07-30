@@ -90,10 +90,16 @@ button:hover {
     background-color: #e5f6ee;
     color: #be8209;
 }
-footer {
-    text-align: center;
-    padding: 20px;
+.footer {
+    width: 100%;
     margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    clear: both;
+}
+
+.footer p {
+    margin: 0;
     font-size: 14px;
-    color: #555;
+    color: #666;
 }
