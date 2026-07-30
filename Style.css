@@ -90,3 +90,10 @@ button:hover {
     background-color: #e5f6ee;
     color: #be8209;
 }
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
